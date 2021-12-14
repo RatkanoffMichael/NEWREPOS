@@ -1,15 +1,21 @@
 <?php
 require_once 'VideoConnect.php';
 ?>
-<form action = "Video_KlientAdd.php" method = "GET">
+<form action = "Video_Disksadd.php" method = "GET">
 <caption> Заполните данные о клиенте </caption>
 <table border="1">
 <tr>
-<th> Имя клиента </th>
-<th> Фамилия клиента </th>
-<th> серия паспорта </th>
-<th> Номер паспорта </th>
-<th> Адресс</th>
+<th> Название фильма </th>
+<th> кол-во серий </th>
+<th> страна </th>
+<th> Дата выпуска </th>
+<th> В главной роли</th>
+<th> Режиссер </th>
+<th> Язык </th>
+<th> страна </th>
+<th> Жанр </th>
+<th> Продолжительность </th>
+<th> Тип диска </th>
 </tr>
 <tr>
 <td> <input type = "text" name = "FNameKlient"> </td>
@@ -36,4 +42,5 @@ if ($_GET['submit1'])
 <br>
 <br>
 <input type = "submit" name = "submit5" value = "Перейти на главную"><br>
+
 </form>

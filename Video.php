@@ -75,7 +75,7 @@ echo '</table>';
 <?php
 if ($_GET['submit2'])
 {
-	$result = mysqli_query($link,"SELECT
+	$result1 = mysqli_query($link,"SELECT
   disks.`№_of_disk`,
   disks.Name,
   disks.Receipt_date,
@@ -83,7 +83,7 @@ if ($_GET['submit2'])
   disks.type
 FROM disks
 WHERE disks.type = '$_GET[knpk]'");
-$rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
+$rows1 = mysqli_fetch_all($result1,MYSQLI_ASSOC);
 echo '<caption>'."Диски типа " . $_GET['knpk'] .'</caption>';
 echo '<table border="1">';
 echo '<tr>';
@@ -92,7 +92,7 @@ echo '<th>'."Дата выхода".'</th>';
 echo '<th>'."Цена за прокат".'</th>';
 echo '<th>'."Тип".'</th>';
 echo '</tr>';
-foreach ($rows as $row)
+foreach ($rows1 as $row)
 {
 	
 
@@ -106,5 +106,16 @@ foreach ($rows as $row)
 }
 
 }
-echo '</table>'.'<input type = "submit" name = "submit3" value = "Взять в прокат">';
+echo '</table>';
+
 ?>
+<form action = "Video_barter.php">
+<br>
+<input type = "submit" name = "submit3" value = "Взять диск в прокат">
+</form>
+
+<form action="Video_KlientAdd.php">
+<br>
+<br>
+<input type = "submit" name = "submit4" value = "Добавить клиента"><br>
+</form>
